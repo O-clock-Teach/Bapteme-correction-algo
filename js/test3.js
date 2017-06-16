@@ -25,5 +25,25 @@ else {
  * Par exemple index.html => html
  */
 function getExtension(str) {
+  /*
+  var lastPoint = str.lastIndexOf('.');
 
+  if (lastPoint === -1) {
+    return false;
+  }
+
+  var ext = str.slice(lastPoint + 1);
+
+  return ext;
+  */
+
+  var parts = str.split('.');
+
+  if (parts.length === 1) {
+    return false;
+  }
+
+  var lastPart = parts[parts.length - 1];
+
+  return lastPart;
 }
